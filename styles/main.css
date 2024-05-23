@@ -50,22 +50,44 @@ table {
 }
 
 .hero-banner {
-  background-image: url("hero-banner.jpg"); /* Assurez-vous d'avoir une image nommée 'hero-banner.jpg' dans votre répertoire */
+  position: relative; /* Pour positionner le pseudo-élément */
+  background-image: url("/assets/images/hero-banner.jpg");
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
-  padding: 100px 0;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Dégradé semi-transparent */
+  z-index: 1; /* Assure que le pseudo-élément est derrière le texte */
 }
 
 .hero-banner h1 {
   font-size: 3em;
   margin: 0;
+  position: relative; /* Pour s'assurer que le texte est au-dessus du pseudo-élément */
+  z-index: 2; /* Assure que le texte est au-dessus du pseudo-élément */
 }
 
 .section {
   padding: 50px 20px;
   text-align: center;
+  margin-top: 60px;
+}
+
+#contact {
+  padding-bottom: 80px;
 }
 
 .section h2 {
@@ -95,4 +117,74 @@ table {
 
 .footer p {
   margin: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 15px;
+  display: block;
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }/*# sourceMappingURL=main.css.map */

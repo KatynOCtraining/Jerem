@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <header class="hero-banner">
-        <h1>Restaurant Exquis</h1>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#menu">Notre Menu</a></li>
+                <li><a href="#location">Nous Trouver</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-banner">
+            <h1>Restaurant Exquis</h1>
+        </div>
     </header>
     
     <section id="menu" class="section">
         <h2>Notre Menu</h2>
-        <ul>
-            <li>Entrée: Salade César</li>
-            <li>Plat Principal: Filet Mignon</li>
-            <li>Dessert: Tarte aux Pommes</li>
-        </ul>
+        <button id="openMenuBtn">Voir le Menu</button>
     </section>
     
     <section id="location" class="section">
@@ -34,5 +39,21 @@
     <footer class="footer">
         <p>&copy; 2024 Restaurant Exquis</p>
     </footer>
+
+    <!-- Modale pour le menu -->
+    <div id="menuModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Notre Menu</h2>
+            <ul>
+                <li>Entrée: Salade César</li>
+                <li>Plat Principal: Filet Mignon</li>
+                <li>Dessert: Tarte aux Pommes</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
 </body>
 </html>
