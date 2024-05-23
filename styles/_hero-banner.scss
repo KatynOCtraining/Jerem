@@ -1,0 +1,13 @@
+.hero-banner {
+    background-image: url('hero-banner.jpg'); /* Assurez-vous d'avoir une image nommée 'hero-banner.jpg' dans votre répertoire */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-banner h1 {
+    font-size: 3em;
+    margin: 0;
+}
