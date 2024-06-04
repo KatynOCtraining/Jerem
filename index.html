@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bb33b41c96.js" crossorigin="anonymous"></script>
+    
+    <script src="./script.js"></script>
 </head>
 <body>
     <header>
@@ -60,18 +62,20 @@
         <p>&copy; 2024 Restaurant Exquis</p>
     </footer>
 
-    <!-- Modale pour le menu -->
-    <div id="menuModal" class="modal">
+      <!-- Modale pour le menu -->
+      <div id="menuModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Notre Menu</h2>
-            <ul>
-                <li>Entrée: Salade César</li>
-                <li>Plat Principal: Filet Mignon</li>
-                <li>Dessert: Tarte aux Pommes</li>
-            </ul>
+            <span class="close">&times;</span> <!-- Ajout de ce span -->
+            <div class="parent">
+                <div class="div1"><h4 class="menu-title">Nos Bières</h4></div>
+                <div class="div2"> <h4 class="menu-title">Entrées</h4></div>
+                <div class="div3"> <h4 class="menu-title">Plats</h4></div>
+                <div class="div4"> <h4 class="menu-title"></h4>Pour Partager</div>
+                <div class="div5"> <h4 class="menu-title"></h4>Désserts</div>
+            </div>
         </div>
     </div>
+
 
 
     <script src="./script.js"></script>
